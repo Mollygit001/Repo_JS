@@ -66,6 +66,7 @@
 // }
 // mul(2,4);
 
+// anonymmous functions
 // //const product = mul(2,4);
 // // console.log("Product: "+ product);
 
@@ -100,6 +101,40 @@
 // console.log(newObject1);
 // console.log(typeof(newObject1));
 
-let new1 = 5 + "5";
-console.log(new1);
-console.log(typeof(new1));
+// let new1 = 5 + "5";
+// console.log(new1);
+// console.log(typeof(new1));
+
+// const delayedFunction = () => {
+//     console.log('delayed function execution!');
+// };
+// console.log("before");
+// setTimeout(delayedFunction, 20);
+// console.log("After");
+
+// const repeatedFunction = () =>{
+//     console.log('repeated function execution!');
+// };
+// let intervalId= setInterval(repeatedFunction , 1000) ;
+
+
+// function repeatedFunction(){
+//     console.log("Execution repeated function...");
+// }
+// const intervalId = setInterval(repeatedFunction, 1000);
+
+// setTimeout(() => {
+//     clearInterval(intervalId);
+//     console.log("Interval Stoppped!");
+// }, 5000);
+
+
+function parentFunction(name, callback){
+    setTimeout(callback, 1000);
+    console.log("hey "+ name);
+}
+
+
+parentFunction("John",function(){
+    console.log("Hey I'm callbackFunction");
+});
